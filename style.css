@@ -1,0 +1,44 @@
+:root {
+  --black: #3B373B;
+  --white: #DDDBDE;
+  --light-blue: #CAD4DF;
+  --gray: #656E77;
+}
+  
+body {
+  background: var(--white);
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  color: var(--black);
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid var(--black);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--gray);
+}
