@@ -18,45 +18,90 @@
         <li><a href="easthampton.html">easthampton</a></li>
       </ul>
     </nav>
+
+    <a href="https://www.atlasobscura.com/things-to-do/massachusetts"
+      target="_blank">
+      <img src=" ./img/funny-mass-collage.png"
+        alt="A funny collage of Boston harbor and things related to Massachussetts">
+    </a>
   </header>
 
-  <img src="./img/funny-mass-collage.png"
-    alt="A funny collage of Boston harbor and things related to massachussetts ">
-
   <h1>Massachusetts</h1>
+  <section class="main">
+    <h2>Smallest towns in Massachusetts</h2>
+    <ol>
+      <li>Gosnold, Dukes County (2016 population: 77)</li>
+      <li>Monroe, Franklin County (2016 population: 119)</li>
+      <li>Mount Washington, Berkshire County (2016 population: 162)</li>
+    </ol>
 
-  <table>
-    <thead>
-      <tr>
-        <th>State facts:</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Population</td>
-        <td>6,981,974 (2022 est.)</td>
-        <td>7,029,917 (2020)</td>
-      </tr>
-      <tr>
-        <td>Governor</td>
-        <td>Charlie Baker</td>
-        <td>Republican</td>
-      </tr>
-      <tr>
-        <td>U.S. Senators: </td>
-        <td>Ed Markey</td>
-        <td>Democrat</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>Elizabeth Warren</td>
-        <td>Democrat</td>
-      </tr>
-    </tbody>
-  </table>
+    <form id="contactForm">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" placeholder="first name" required>
 
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" placeholder="last name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" placeholder="email address" required>
+
+      <label for="confirmEmail">Confirm Email Address:</label>
+      <input type="email" id="confirmEmail" placeholder="Confirm your email"
+        required>
+
+      <label for="question">Ask a Question:</label>
+      <textarea id="question"
+        placeholder="What would you like to know about Massachusetts?"></textarea>
+
+      <button type="button"
+        onclick="alert('Form under construction 🚧 ')">Submit</button>
+    </form>
+  </section>
+
+  <aside>
+    <table>
+      <thead>
+        <tr>
+          <th>State facts:</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Population</td>
+          <td>6,981,974 (2022 est.)</td>
+          <td>7,029,917 (2020)</td>
+        </tr>
+        <tr>
+          <td>Governor</td>
+          <td>Charlie Baker</td>
+          <td>Republican</td>
+        </tr>
+        <tr>
+          <td>U.S. Senators: </td>
+          <td>Ed Markey</td>
+          <td>Democrat</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Elizabeth Warren</td>
+          <td>Democrat</td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
+
+  <script>
+    document.getElementById("confirmEmail").addEventListener("blur", function () {
+      var email = document.getElementById("email").value;
+      var confirmEmail = this.value;
+
+      if (email !== confirmEmail) {
+        alert("Email mismatch. Please correct the error.");
+      }
+    });
+  </script>
 </body>
 
 </html>
